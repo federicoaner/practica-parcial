@@ -18,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { ActorTablaComponent } from './componentes/actor-tabla/actor-tabla.component';
 import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment';
+
+import { environment } from '../environments/environment';
 //import { config } from 'process';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    
     
   ],
   providers: [],
