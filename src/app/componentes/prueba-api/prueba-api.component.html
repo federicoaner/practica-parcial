@@ -1,0 +1,38 @@
+
+<!--
+
+<div class="paises" *ngFor="let pais of paises">
+   
+    <img  class="banderas" [src]="pais.flag" alt=""  margin="50px" >
+
+</div>
+-->
+
+
+
+
+
+<ul class="list-group mb-3">
+    <li class="list-group-item d-flex justify-content-between lh-sm" *ngFor='let pais of paises'>
+        <div (click)="algo(pais.name)" >
+            <img [src]='pais.flag' alt="" height="35px" width="35px">
+            <p class='d-inline'>{{pais.name}}</p>
+        </div>
+    </li>
+</ul>
+
+
+
+
+
+<!--
+
+<h1 *ngIf="(paises|async) ==null">cargando...</h1>
+<div class="paises" *ngFor="let pais of paises | async">
+    <img src="pais.flag" alt="">
+    <p>{{pais.name}}</p>
+
+
+
+</div>
+-->

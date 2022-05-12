@@ -1,0 +1,17 @@
+<div *ngIf="unaPelicula">
+   
+   
+  
+    <div class="card" style="width:200px">
+        <img class="card-img-top" src="" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h2 class="card-title">{{unaPelicula.nombre}}</h2>
+          <p class="card-text" >Publico: {{unaPelicula.cantidadPublico}} espectadores</p>
+          <p class="card-text" >Actor: {{unaPelicula.actor}}</p>
+          <p class="card-text"> Fecha de Estreno: {{unaPelicula.fechaEstreno}} </p>
+          <p class="card-text"> Genero: {{unaPelicula.tipo}} </p>
+         
+          <a href="#" class="btn btn-danger">Borrar</a>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,27 @@
+
+
+<div >
+	<table class="table table-striped">
+	  <thead>
+		<tr>
+		  <th>Id</th>
+		  <th>Nombre</th>
+		  <th>Fecha de estreno</th>
+		  <th>Tipo</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr *ngFor="let Pelicula of listadoPeliculas">
+		  <td>{{Pelicula.id}}</td>
+		  <td>{{Pelicula.nombre}}</td>
+		  <td>{{Pelicula.fechaEstreno}}</td>
+		  <td>{{Pelicula.tipo}}</td>
+		  
+		 <!----> <td><button type="button" class="btn btn-info btn-circle" (click)="mostrarDetalles(Pelicula)"  ><i class="fa fa-check"></i>
+		 
+		</button></td>
+		</tr>
+	   
+	  </tbody>
+	</table>
+  </div>

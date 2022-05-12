@@ -1,0 +1,125 @@
+
+
+<body class="bg-light">
+    <div class="container">
+ 
+        <br><br>
+        <h1>ALTA PELICULA</h1>
+        <br><br>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">ACTORES</span>
+        <span class="badge badge-secondary badge-pill"></span>
+      </h4>
+      <ul class="list-group mb-3">
+
+        
+       <app-actor-tabla (nombreOutput)="recibirActor($event)"></app-actor-tabla>
+        
+     
+     
+      </ul>
+
+     
+
+    
+    </div>
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Form</h4>
+      <form class="needs-validation" novalidate [formGroup]="formB"  (ngSubmit)="aceptar()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Nombre</label>
+            
+            <input type="text" class="form-control" id="nombre" placeholder="" value="" required formControlName="nombre"    >
+            <small class="invalid"
+              *ngIf="formB.controls['nombre'].errors?.['required'] && formB.controls['nombre'].touched">El nombre es requerido  
+            </small>
+            
+           
+          </div>
+
+
+       
+        </div>
+
+     
+        <div class="col-mb-3">
+            <label for="lastName" class="form-label">Tipo</label>
+            <select class="form-control" formControlName='tipo' required>
+                <option value="Terror" selected>Terror</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Amor">Amor</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <small class="invalid"
+            *ngIf="formB.controls['tipo'].errors?.['required'] && formB.controls['tipo'].touched">El tipo es Requerido
+            </small> 
+          </div>
+
+       
+
+        <div class="mb-3">
+            <label for="address2">Cantidad de Publico <span class="text-muted"></span></label>
+            <input type="text" class="form-control" id="address2" placeholder="" formControlName="cantPublico">
+            <small class="invalid"
+            *ngIf="formB.controls['cantPublico'].errors?.['required'] && formB.controls['cantPublico'].touched">Cantidad de publico es Requerido
+            </small> 
+          </div>
+
+
+          <div class="mb-3">
+            <label for="address2">Actor <span class="text-muted"></span></label>
+            <input type="text" class="form-control" id="address2" placeholder=""   [(ngModel)]="actorNombre" [ngModelOptions]="{standalone: true}">
+            <small class="invalid"
+            *ngIf="formB.controls['actorNombre'].errors?.['required'] && formB.controls['actorNombre'].touched">El actor es Requerido
+            </small> 
+          </div>
+
+        <div class="mb-3">
+            <label for="address2">Fecha de Estreno <span class="text-muted"></span></label>
+            <input type="text" class="form-control" id="address2" placeholder="" formControlName="fechaEstreno">
+            <small class="invalid"
+            *ngIf="formB.controls['fechaEstreno'].errors?.['required'] && formB.controls['fechaEstreno'].touched">Fecha es  Requerido
+            </small> 
+          </div>
+
+
+          <div class="mb-3">
+            <label for="address2">Foto <span class="text-muted"></span></label>
+            <input type="file" formControlName="foto" /> 
+            <small class="invalid"
+            *ngIf="formB.controls['foto'].errors?.['required'] && formB.controls['foto'].touched">Foto es  Requerido
+            </small>
+            
+          </div>
+
+        
+   
+
+        
+        <hr class="mb-4">
+        <button type="submit" class="btn btn-primary btn-block"
+        [disabled]="formB.invalid ">
+          Aceptar
+        </button>
+      
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class='mb-3'>
+    <button class='btn btn-outline-success' [routerLink]="['/']">Volver al inicio</button>
+  </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src=""></script></body>
+
+        

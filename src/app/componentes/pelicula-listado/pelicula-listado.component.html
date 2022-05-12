@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Listado Pelicula</h1>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg"  role="button" (click)="mandarClick()" >CAMBIAR VISTA </a></p>
+     
+      
+       <div  *ngIf="banderaListado">
+          <tr *ngFor="let Peliculas of listadoPeliculas">
+            {{Peliculas.id}}
+            {{Peliculas.nombre}}
+            {{Peliculas.fechaEstreno}}
+            {{Peliculas.tipo}}
+            
+            
+
+          </tr>
+        </div> 
+         
+            
+          </div> 
+
+         
+      
+		 
+       
+          
+    
+    
+  </div>
+
+  
